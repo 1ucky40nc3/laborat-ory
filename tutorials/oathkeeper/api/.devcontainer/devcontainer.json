@@ -1,26 +1,25 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust
 {
-	"name": "api",
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"editor.formatOnSave": true,
-				"debug.allowBreakpointsEverywhere": true
-			},
-			"extensions": [
-				"streetsidesoftware.code-spell-checker",
-				"rust-lang.rust-analyzer",
-				"vadimcn.vscode-lldb",
-				"esbenp.prettier-vscode"
-			]
-		}
-	},
-	"dockerComposeFile": [
-		"../docker-compose.yml",
-		"docker-compose.devcontainer.yml"
-	],
-	"service": "rust",
-	"workspaceFolder": "/workspace",
-	"shutdownAction": "stopCompose"
+  "name": "api",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "debug.allowBreakpointsEverywhere": true
+      },
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb",
+        "esbenp.prettier-vscode",
+        "serayuzgur.crates",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "dockerComposeFile": ["docker-compose.devcontainer.yml"],
+  "service": "rust",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose"
 }
